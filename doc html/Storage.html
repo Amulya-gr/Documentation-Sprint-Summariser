@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint Summary Storage Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Sprint Summarizer Snap-in Documentation</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="working.html">Working</a></li>
+        <li><a href="codebase.html">File Structure</a></li>
+        <li><a href="dependencies.html">Dependencies</a></li>
+        <li><a href="storage.html">Summary Storage</a></li>
+    </ul>
+</nav>
+<main>
+    <section>
+        <h2>Sprint Summary Storage Documentation</h2>
+        <h3>Current Implementation</h3>
+        <ul>
+            <li><strong>Storage:</strong> Sprint summaries are stored in an in-memory object within the application code.</li>
+            <li><strong>Reason:</strong> Simplifies prototyping and avoids external dependencies during early development.</li>
+        </ul>
+        <h3>Limitations</h3>
+        <ul>
+            <li><strong>No Persistence:</strong> Data is lost on application restarts.</li>
+            <li><strong>Limited Scalability:</strong> Hard to manage as the data grows.</li>
+            <li><strong>Restricted Access:</strong> Summaries are not shareable across systems.</li>
+        </ul>
+        <h3>Future Plan</h3>
+        <ul>
+            <li><strong>Database Migration:</strong></li>
+            <ul>
+                <li>Store summaries in a database (e.g., PostgreSQL, MongoDB).</li>
+                <li>Allow persistent, scalable, and queryable data storage.</li>
+            </ul>
+        </ul>
+        <h3>Conclusion</h3>
+        <p>The current approach is temporary and will transition to a database for better scalability and persistence.</p>
+    </section>
+</main>
+<footer>
+    <a href="https://github.com/Amulya-gr/Sprint-Summariser" target="_blank">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="40" height="40">
+    </a>
+</footer>
+</body>
+</html>
