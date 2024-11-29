@@ -45,17 +45,41 @@
     <section>
         <h2>Workflow</h2>
         <img src="arc-with-bg(1).svg" alt="Workflow Image" width="600" height="400" class="center-image">
-        <ol>
-            <li>Capture Sprint Data: Listens for `work_created` and `work_updated` events via the DevRev API for capturing relevant task data.</li>
-            <li>Store Sprint Details: Maintain and update data pertaining to active sprints, including starting and ending times.</li>
-            <li>Process End-of-Sprint Event:
-                <ul>
-                    <li>Fetches issues related to the sprint.</li>
-                    <li>Uses OpenAI to generate a structured overview which serves as a comprehensive post-mortem report.</li>
-                </ul>
-            </li>
-            <li>Slack Report Generation: Pushes the final sprint summary to the specified Slack channel working on user configurations.</li>
-        </ol>
+         <ol>
+    <li>
+      <strong>User Action in DevRev System:</strong> A user creates or updates an issue in an active sprint, triggering a <code>work_created</code> or <code>work_updated</code> event via the DevRev-webhook event source.
+    </li>
+    <li>
+      <strong>Event Sent to Snap-in:</strong> The triggered event is sent to the Snap-in for processing.
+    </li>
+    <li>
+      <strong>Snap-in Event Handling:</strong>
+      <ul>
+        <li>Schedules two key events: <em>Mid-Sprint Alert</em> and <em>Sprint End Event</em>.</li>
+        <li>Begins data aggregation when the events are triggered.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Retrieving Sprint Data:</strong> The Snap-in fetches sprint details, issue statuses, and velocity metrics using DevRev's <code>works.list API</code>.
+    </li>
+    <li>
+      <strong>Data Processing with OpenAI API:</strong> The Snap-in sends the sprint data to the OpenAI API, which:
+      <ul>
+        <li>Analyzes the data.</li>
+        <li>Generates a formatted summary with insights (e.g., progress, areas for improvement).</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Summary Delivery:</strong> The generated summary is sent via:
+      <ul>
+        <li><strong>Slack Webhook:</strong> Posts the summary to a Slack channel.</li>
+        <li><strong>Optional Further Processing:</strong> Enhanced insights from OpenAI.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>External Systems Integration:</strong> The Snap-in ensures seamless collaboration using Slack and OpenAI for AI-enhanced sprint management.
+    </li>
+  </ol>
     </section>
     <section>
         <h2>Automation Handling</h2>
