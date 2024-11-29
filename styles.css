@@ -12,6 +12,14 @@ body {
       color: green;
     }
 
+    a {
+      color: orange; /* Changes the link color to orange */
+      text-decoration: none; /* Removes the underline if desired */
+    }
+    a:visited {
+      color: orange; /* Ensures the visited links stay orange */
+    }
+
 header {
     background-color: #121212;
     color: #ffffff;
