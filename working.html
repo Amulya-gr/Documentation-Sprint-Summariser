@@ -32,14 +32,14 @@
     <section>
         <h2>Setup Instructions</h2>
         <ol>
-            <li>Clone the repository:
+            <li><h3>Clone the repository:</h3>
                 <pre>git clone https://github.com/Amulya-gr/Sprint-Summariser </pre>
-            <li>Add the provided <code>manifest.yaml</code> file to your DevRev project.</li>
-            <li>Specify the Slack Webhook URL during setup:
-                <pre>webhook_url: "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"</pre>
             </li>
-            <li>Ensure event sources <code>devrev-webhook</code> and <code>scheduled-events</code> are enabled.</li>
-            <li>Activate automations to schedule events and generate summaries.</li>
+            <li><h3>Install Dependencies:</h3> Ensure you have Node.js installed, then run:
+                <pre>npm install</pre>
+            </li>
+            <li>Go to config.json file located at code/src/config.json and put your openai api key.</li>
+            <li>Deploy the snap-in. <a href="https://developer.devrev.ai/public/snapin-development/concepts#function" target="_blank" rel="noopener noreferrer">Here</a></li>
         </ol>
     </section>
     <section>
@@ -61,29 +61,12 @@
         <h2>Automation Handling</h2>
             <li>Automation Entry Points:
                 <ol>
-                    <li>Management Function: Continually update tracking details aligning with events from the `devrev-webhook`.</li>
-                    <li>Summary Function: Transforms and delivers a structured overview once a sprint cycles out.</li>
+                    <li>Management Function (Function 1): Continually update tracking details aligning with events from the `devrev-webhook`.</li>
+                    <li>Summary Function (Function 2): Transforms and delivers a structured overview once a sprint cycles out.</li>
                 </ol>
             </li>
     </section>
 
-    <section>
-        <h2>Troubleshooting</h2>
-        <ul>
-            <li>Ensure full compliance with Slack API permissions and URL configuration for post mapping.</li>
-            <li>Any issues with OpenAI output reliability or speed should consider network latency and available query resources.</li>
-            <li>Perform validity checks on DevRev API connections with correct read permissions ensured.</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Concluding Remarks</h2>
-        <li>
-            The Sprint Summarizer Snap-in fosters an automated workflow conducive to rapid and precise sprint retrospectives. 
-            This amplifies team efficiencies by transforming retrospective processes from cumbersome manual endeavors to brisk, 
-            constructive insights amenable to direct team reporting and adjustment through principally-mediated AI advisory over 
-            Oracle's AI advanced through a Slack inclusive arterial mechanism.
-        </li>
-    </section>
 </main>
 <footer>
     <a href="https://github.com/Amulya-gr/Sprint-Summariser" target="_blank">
