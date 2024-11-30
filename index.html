@@ -26,7 +26,10 @@
         <p>
             The Sprint Summarizer automates the generation of detailed sprint summaries at the conclusion of each sprint. These summaries capture the highlights 
             of the sprint, focusing on successes, challenges encountered, and actionable insights, and automatically deliver this information to a pre-configured 
-            Slack channel. This tool eliminates the manual effort associated with compiling sprint reviews, facilitating quick and informed evaluations of team
+            Slack channel.
+        </p>
+        <p>
+            This tool eliminates the manual effort associated with compiling sprint reviews, facilitating quick and informed evaluations of team
             progress. 
             With its structured design and scalable utilities, the Sprint Summarizer Snap-In helps teams focus on what matters most—achieving their goals while staying aligned and 
             informed. Perfect for agile teams aiming to optimize their sprint retrospectives and communications.
@@ -58,7 +61,7 @@
         <h2>Additional Features</h2>
             <ul>
                 <li><strong>Sprint Velocity:</strong> Planned Sprint velocity and actual attained sprint velocity is calculated based on the number of issues present and priorities of each issue.</li>
-                <li><strong>Sprint Grade:</strong> Bsed on the percentage of actual velocity achieved compared to the planned velocity, categorizing it into “Exceptional,” “Good,” “Satisfactory,” “Needs Improvement,” or “Poor.” It helps evaluate sprint performance by mapping velocity completion to qualitative feedback.</li>
+                <li><strong>Sprint Grade:</strong> Based on the percentage of actual velocity achieved compared to the planned velocity, categorizing it into “Exceptional,” “Good,” “Satisfactory,” “Needs Improvement,” or “Poor.” It helps evaluate sprint performance by mapping velocity completion to qualitative feedback.</li>
                 <li><strong>Mid Sprint Alert:</strong> A checkpoint conducted midway through a sprint to review progress based on the so far obstained velocity and assess the status of tasks or issues, then list open issues based on priority. It helps ensure the sprint is on track to achieve its goals.</li>
                 <li><strong>Sprint Comparison:</strong> Addtional insights on Velocity, Blockers and Issue Completion Trends, including Recommendations in comparison to the previous sprints.</li>
             </ul>
@@ -104,7 +107,7 @@
                 <tr>
                     <td>scheduled-events</td>
                     <td>Custom events triggered by snap-in.</td>
-                    <td>custom:work-created-scheduled-event</td>
+                    <td>custom:sprint-end-event, custom:mid-sprint-alert-event</td>
                 </tr>
             </tbody>
         </table>
