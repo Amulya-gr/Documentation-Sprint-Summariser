@@ -24,7 +24,7 @@
     <section>
         <h2>Prerequisites</h2>
         <ul>
-            <li> Obtain a Slack webhook URL to specify where sprint summaries should be posted.</li>
+            <li> Obtain a Slack channel webhook URL to specify where sprint summaries should be posted.</li>
             <li>Access DevRev API to monitor and gather sprint data. Ensure you have necessary roles and permissions.</li>
             <li>A valid API key for OpenAI for creating the summarized content.</li>
         </ul>
@@ -60,7 +60,10 @@
       </ul>
     </li>
     <li>
-      <strong>Retrieving Sprint Data:</strong> The Snap-in fetches sprint details, issue statuses, and velocity metrics using DevRev's <code>works.list API</code>.
+      <strong>Retrieving Sprint Data:</strong> The Snap-in fetches details of all the issues in the sprint using DevRev's <code>works.list API</code>.
+    </li>
+    <li>
+      <strong>Formats Data and Constructs Prompt:</strong> Relevant data is extracted and formatted from the <code>works.list</code> API. Sprint velocity and grade are calculated, followed by retrieving the previous sprint summary. Then, the prompt is constructed using the formatted data.
     </li>
     <li>
       <strong>Data Processing with OpenAI API:</strong> The Snap-in sends the sprint data to the OpenAI API, which:
@@ -73,7 +76,6 @@
       <strong>Summary Delivery:</strong> The generated summary is sent via:
       <ul>
         <li><strong>Slack Webhook:</strong> Posts the summary to a Slack channel.</li>
-        <li><strong>Optional Further Processing:</strong> Enhanced insights from OpenAI.</li>
       </ul>
     </li>
     <li>
@@ -83,12 +85,14 @@
     </section>
     <section>
         <h2>Automation Handling</h2>
-            <li>Automation Entry Points:
+        <ul>
+            <li>Automations:
                 <ol>
-                    <li>Management Function (Function 1): Continually update tracking details aligning with events from the `devrev-webhook`.</li>
-                    <li>Summary Function (Function 2): Transforms and delivers a structured overview once a sprint cycles out.</li>
+                    <li><strong>Schedule Sprint End Event with Sprint Data</strong>: Triggered by events <code>work_created</code> and <code>work_updated</code>, calling <strong>function_1</strong>.</li>
+                    <li><strong>Generate Sprint Summary on Sprint End</strong>: Triggered by <code>custom:sprint-end-event</code> and <code>custom:mid-sprint-alert-event</code>, calling <strong>function_2</strong>.</li>
                 </ol>
             </li>
+        </ul>
     </section>
 
 </main>
