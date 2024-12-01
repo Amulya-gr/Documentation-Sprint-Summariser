@@ -275,7 +275,7 @@ footer img:hover {
 
 /* Scrollbar styling */
 .scrollable-container::-webkit-scrollbar {
-    height: 8px;
+    height: 10px;
 }
 
 .scrollable-container::-webkit-scrollbar-thumb {
