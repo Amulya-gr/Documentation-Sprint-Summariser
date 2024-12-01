@@ -289,20 +289,21 @@ footer img:hover {
 
 .footer {
     text-align: center;
-    background-color: #f8f9fa; /* Subtle light grey background */
+    background-color: #333; /* Dark grey background */
+    color: #f0f0f0; /* Light text for contrast */
     padding: 20px 0;
-    border-top: 1px solid #ddd; /* Light border for separation */
     font-family: Arial, sans-serif;
-    color: #333; /* Neutral dark grey text */
+    font-size: 14px;
+    border-top: 2px solid #444; /* Subtle border for separation */
 }
 
 .footer-content {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .footer-content p {
-    margin: 0 0 10px 0;
-    font-size: 14px;
+    margin: 0;
+    font-size: 16px;
 }
 
 .footer-content img {
@@ -310,23 +311,24 @@ footer img:hover {
 }
 
 .contact-details {
-    margin-top: 15px;
-    text-align: left;
-    display: inline-block; /* Centers the contact details block */
+    display: inline-block; /* Center-align contact details block */
+    text-align: left; /* Align text and icons within the block */
+    margin-top: 10px;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
+    gap: 10px; /* Space between icon and text */
+    margin-bottom: 10px;
 }
 
 .contact-item img {
-    display: block;
+    width: 20px;
+    height: 20px;
 }
 
 .contact-item span {
     font-size: 14px;
-    color: #333;
+    color: #f0f0f0;
 }
