@@ -115,17 +115,68 @@
     
 </main>
 
+<style>
+    footer {
+        background-color: #f1f1f1;
+        padding: 20px;
+        border-top: 2px solid #ddd;
+        font-family: Arial, sans-serif;
+    }
+    footer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    footer a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    footer img {
+        margin-right: 10px;
+    }
+    footer span {
+        font-size: 14px;
+        color: #333;
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info div {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+    }
+    .contact-info img {
+        margin-right: 10px;
+    }
+    .contact-info span {
+        font-size: 14px;
+        color: #333;
+    }
+    .footer-header {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+</style>
+
 <footer>
     <div>
-        <a href="https://github.com/your-repository-link">
+        <a href="https://github.com/Amulya-gr/Documentation-Sprint-Summariser">
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" 
                  alt="GitHub Logo" width="60" height="60">
         </a>
         <span>Press the Icon to visit the Github Repository</span>
     </div>
 
-    <div>
-        <p><strong>Contact Information:</strong></p>
+    <div class="contact-info">
+        <p class="footer-header">Contact Information:</p>
         <div>
             <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" 
                  alt="Email Icon" width="20" height="20">
@@ -143,6 +194,7 @@
         </div>
     </div>
 </footer>
+
 
 </body>
 </html>
