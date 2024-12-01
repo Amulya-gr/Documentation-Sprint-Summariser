@@ -63,7 +63,7 @@
       <strong>Retrieving Sprint Data:</strong> The Snap-in fetches details of all the issues in the sprint using DevRev's <code>works.list API</code>.
     </li>
     <li>
-      <strong>Send Mid-Sprint Alert:</strong> Filter active issues from the list and sort them by priority. Then, calculate the velocity achieved so far and the remaining velocity for the sprint, and send the alert to Slack.
+      <strong>Send Mid-Sprint Alert:</strong> Filter open issues from the list and sort them by priority. Then, calculate the velocity achieved so far and the remaining velocity for the sprint, and send the alert to Slack.
     </li>
     <li>
       <strong>Formats Data and Constructs Prompt:</strong> Relevant data is extracted and formatted from the <code>works.list</code> API. Sprint velocity and grade are calculated, followed by retrieving the previous sprint summary. Then, the prompt is constructed using the formatted data.
