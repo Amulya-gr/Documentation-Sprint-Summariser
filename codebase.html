@@ -22,6 +22,7 @@
     <section>
         <h2>Codebase Structure</h2>
         <pre>
+d<pre>
 devrev-snaps-typescript-template/
 ├── code/
 │   ├── babel.config.js
@@ -29,26 +30,37 @@ devrev-snaps-typescript-template/
 │   ├── manifest.yaml
 │   ├── nodemon.json
 │   ├── package.json
+│   ├── package-lock.json
 │   ├── src/
 │   │   ├── config.json
 │   │   ├── fixtures/
-│   │   |   ├── function_1_event.json
+│   │   │   ├── function_1_event.json
 │   │   │   └── function_2_event.json
-|   │   ├── functions/
+│   │   ├── functions/
 │   │   │   ├── function_1/
-│   │   │   │   └── index.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── index.test.ts
 │   │   │   ├── function_2/
-│   │   │   │   └── index.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   └── index.test.ts
+│   │   │   ├── test-runner/
+│   │   │   │   ├── example.test.ts
+│   │   │   │   └── test-runner.ts
 │   │   ├── function-factory.ts
 │   │   ├── index.ts
 │   │   ├── main.ts
 │   │   ├── sprintEndSlackPoster.ts
 │   │   └── midSprintSlackPoster.ts
+│   │   ├── test/
+│   │   │   ├── http_client.ts
+│   │   │   ├── main.ts
+│   │   │   ├── runner.ts
+│   │   │   └── types.ts
 │   ├── tsconfig.json
-│   └── tsconfig.eslint.json
+│   ├── tsconfig.eslint.json
 ├── .gitignore
 └── README.md
-        </pre>
+</pre>
     </section>
 </main>
 <footer>
