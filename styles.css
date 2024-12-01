@@ -289,10 +289,11 @@ footer img:hover {
 
 .footer {
     text-align: center;
-    background-color: #f8f9fa; /* Light grey background */
+    background-color: #f8f9fa; /* Subtle light grey background */
     padding: 20px 0;
-    border-top: 2px solid #ddd; /* Adds a top border for separation */
+    border-top: 1px solid #ddd; /* Light border for separation */
     font-family: Arial, sans-serif;
+    color: #333; /* Neutral dark grey text */
 }
 
 .footer-content {
@@ -302,42 +303,30 @@ footer img:hover {
 .footer-content p {
     margin: 0 0 10px 0;
     font-size: 14px;
-    color: #333;
-}
-
-.footer-content a {
-    text-decoration: none;
 }
 
 .footer-content img {
-    transition: transform 0.3s ease-in-out;
-}
-
-.footer-content img:hover {
-    transform: scale(1.2); /* Slight zoom on hover */
-}
-
-.contact-details {
     margin-top: 10px;
 }
 
-.contact-details p {
-    font-size: 14px;
-    color: #555;
-    margin: 0 0 10px 0;
+.contact-details {
+    margin-top: 15px;
+    text-align: left;
+    display: inline-block; /* Centers the contact details block */
 }
 
-.contact-icons {
+.contact-item {
     display: flex;
-    justify-content: center;
-    gap: 15px; /* Space between icons */
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
 }
 
-.contact-icons a img {
-    transition: transform 0.3s ease-in-out;
+.contact-item img {
+    display: block;
 }
 
-.contact-icons a img:hover {
-    transform: scale(1.2); /* Slight zoom on hover */
+.contact-item span {
+    font-size: 14px;
+    color: #333;
 }
-
