@@ -213,12 +213,8 @@ table th {
 
 /* Footer */
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #1d1f22;
+   padding: 20px;
+    background-color: #000000; /* Set background to black */
     font-family: Arial, sans-serif;
 }
 
