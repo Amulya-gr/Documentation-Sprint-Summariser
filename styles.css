@@ -8,18 +8,21 @@ body {
     color: #c9d1d9; /* Subtle text color for better readability */
     overflow-x: hidden;
 }
+
 .custom-link {
-      color: green;
-    }
+    color: green;
+}
 
-    a {
-      color: orange; /* Changes the link color to orange */
-      text-decoration: none; /* Removes the underline if desired */
-    }
-    a:visited {
-      color: orange; /* Ensures the visited links stay orange */
-    }
+a {
+    color: orange; /* Changes the link color to orange */
+    text-decoration: none; /* Removes the underline if desired */
+}
 
+a:visited {
+    color: orange; /* Ensures the visited links stay orange */
+}
+
+/* Header */
 header {
     background-color: #121212;
     color: #ffffff;
@@ -211,20 +214,56 @@ table th {
 /* Footer */
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 20px;
     background-color: #1d1f22;
+    font-family: Arial, sans-serif;
 }
 
 footer img {
     width: 40px;
     height: 40px;
+    margin-right: 10px;
     transition: transform 0.3s ease;
 }
 
 footer img:hover {
     transform: scale(1.1);
+}
+
+footer span {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Contact Information */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.contact-info img {
+    margin-right: 10px;
+}
+
+.contact-info span {
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-header {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 /* Media Queries for Mobile Devices */
@@ -267,7 +306,7 @@ footer img:hover {
 /* Individual image styling */
 .scrollable-container img {
     width: 600px; /* Set a fixed width for images */
-    height: 400; /* Maintain aspect ratio */
+    height: 400px; /* Maintain aspect ratio */
     border: 1px solid #ddd; /* Optional: Add a border to images */
     border-radius: 5px; /* Optional: Round the corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
@@ -284,63 +323,10 @@ footer img:hover {
 }
 
 .scrollable-container::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background-color: #555;
 }
 
-footer {
+.scrollable-container::-webkit-scrollbar-track {
     background-color: #f1f1f1;
-    padding: 20px;
-    border-top: 2px solid #ddd;
-    font-family: Arial, sans-serif;
-}
-
-footer div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-footer a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-footer img {
-    margin-right: 10px;
-}
-
-footer span {
-    font-size: 14px;
-    color: #333;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-info div {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-}
-
-.contact-info img {
-    margin-right: 10px;
-}
-
-.contact-info span {
-    font-size: 14px;
-    color: #333;
-}
-
-.footer-header {
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 10px;
+    border-radius: 4px;
 }
