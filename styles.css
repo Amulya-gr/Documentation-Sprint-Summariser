@@ -243,11 +243,13 @@ footer img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1.0); /* Make the icon brighter by default */
 }
 
 footer img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slight zoom on hover */
+    filter: brightness(1.2); /* Brighten the icon on hover */
 }
 /* Contact Information */
 .contact-info {
