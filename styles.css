@@ -218,7 +218,7 @@ footer {
     align-items: center; /* Align elements vertically */
     padding: 20px;
     background-color: #121212; /* Background color */
-    color: #ffffff; /* Text color */
+    color: #ffffff; /* Default text color */
     font-family: Arial, sans-serif;
 }
 
@@ -227,14 +227,16 @@ footer div {
     text-align: center; /* Center-align text inside each section */
 }
 
-footer a {
-    color: #ffffff; /* Ensure links are white */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth color transition */
+footer a,
+footer span { 
+    color: #ffffff; /* Set email ID, number, and all links to white */
+    text-decoration: none; /* Remove underline for links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-footer a:hover {
-    color: #ffa726; /* Change color on hover */
+footer a:hover,
+footer span:hover {
+    color: #ffa726; /* Add hover color for interactive elements */
 }
 
 footer img {
@@ -266,7 +268,7 @@ footer img:hover {
 
 .contact-info span {
     font-size: 14px;
-    color: #333;
+    color: #ffffff;
 }
 
 .footer-header {
