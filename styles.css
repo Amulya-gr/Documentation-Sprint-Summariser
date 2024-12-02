@@ -213,9 +213,28 @@ table th {
 
 /* Footer */
 footer {
+    display: flex; /* Arrange items in a row */
+    justify-content: space-around; /* Space out elements evenly */
+    align-items: center; /* Align elements vertically */
     padding: 20px;
-    background-color: #121212; /* Set background to black */
+    background-color: #121212; /* Background color */
+    color: #ffffff; /* Text color */
     font-family: Arial, sans-serif;
+}
+
+footer div {
+    flex: 1; /* Allow each section to grow equally */
+    text-align: center; /* Center-align text inside each section */
+}
+
+footer a {
+    color: #ffffff; /* Ensure links are white */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+footer a:hover {
+    color: #ffa726; /* Change color on hover */
 }
 
 footer img {
@@ -228,12 +247,6 @@ footer img {
 footer img:hover {
     transform: scale(1.1);
 }
-
-footer span {
-    font-size: 14px;
-    color: #333;
-}
-
 /* Contact Information */
 .contact-info {
     display: flex;
